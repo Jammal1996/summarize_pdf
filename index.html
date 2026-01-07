@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📄 AI PDF Summarizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🤖 AI PDF Summarizer</h1>
+    <p>Study smarter. Work faster. Let AI summarize your PDFs ✨</p>
+    <button id="dark-toggle">🌙 Dark Mode</button>
+</header>
+
+<div class="container">
+
+    <div id="drop-zone">
+        <p>📄 Drag & drop your PDF here</p>
+        <span>or</span>
+        <input type="file" id="pdf-file" accept=".pdf">
+    </div>
+
+    <div class="controls">
+        <label>🧠 Summary Length:</label>
+        <select id="summary-length">
+            <option value="short">Short ⚡</option>
+            <option value="medium" selected>Medium 🧩</option>
+            <option value="long">Long 📘</option>
+        </select>
+        <button id="summarize-btn">🚀 Summarize</button>
+    </div>
+
+    <div id="progress" class="hidden">
+        <div class="bar"></div>
+        <p>⏳ Summarizing your document...</p>
+    </div>
+
+    <div id="result" class="hidden">
+        <h2 id="title"></h2>
+
+        <section>
+            <h3>📝 Executive Summary</h3>
+            <p id="executive-summary"></p>
+        </section>
+
+        <section>
+            <h3>📌 Key Points</h3>
+            <pre id="key-points"></pre>
+        </section>
+
+        <section>
+            <h3>🔑 Important Concepts</h3>
+            <pre id="important-concepts"></pre>
+        </section>
+
+        <section>
+            <h3>🎯 Final Takeaway</h3>
+            <p id="final-takeaway"></p>
+        </section>
+
+        <div class="download">
+            <button id="download-txt">📥 Download TXT</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

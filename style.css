@@ -1,0 +1,183 @@
+/* =========================
+   COLOR VARIABLES
+========================= */
+
+:root {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent: #4f46e5;
+    --box: #f1f5f9;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --box: #0b1220;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+}
+
+p, label {
+    color: var(--text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header p {
+    color: var(--muted);
+}
+
+header button {
+    margin-top: 10px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+body.dark .container {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* =========================
+   DROP ZONE
+========================= */
+
+#drop-zone {
+    border: 2px dashed var(--accent);
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: var(--text);
+    transition: background 0.3s;
+}
+
+#drop-zone:hover {
+    background: var(--box);
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--muted);
+    background: var(--card);
+    color: var(--text);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    padding: 10px 16px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+#progress {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bar {
+    height: 6px;
+    background: var(--accent);
+    width: 100%;
+    animation: loading 2s infinite;
+    border-radius: 3px;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+/* =========================
+   RESULT SECTIONS
+========================= */
+
+section {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   PRE BLOCKS (KEY FIX)
+========================= */
+
+pre {
+    background: var(--box);
+    color: var(--text);
+    padding: 15px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+/* =========================
+   UTILS
+========================= */
+
+.hidden {
+    display: none;
+}
